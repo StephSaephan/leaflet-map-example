@@ -132,7 +132,7 @@
 
         //PacIOOS GeoServer Example; adding a single layer with properties
         //Using a relative url to call layer instead of http
-        var EconSeaLevRise = L.tileLayer.wms('//geo.pacioos.hawaii.edu/geoserver/ows?', {
+        var EconSeaLevRise = L.tileLayer.wms('http://geo.pacioos.hawaii.edu/geoserver/ows?', {
             layers: 'PACIOOS:hi_tt_all_slrxa_econ_2030',
             format: 'image/png',
             opacity: 0.5,
@@ -149,7 +149,7 @@
         };
 
         //Using a relative url to call layer instead of http
-        var source = L.WMS.source('//geo.pacioos.hawaii.edu/geoserver/ows?', options);
+        var source = L.WMS.source('http://geo.pacioos.hawaii.edu/geoserver/ows?', options);
         var CREDREASites = source.getLayer('PACIOOS:hi_cred_all_rea_sites');
         var VegShoreline = source.getLayer('PACIOOS:hi_hcgg_all_shore_veg');
 
